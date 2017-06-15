@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<div style="width:500px;margin:0 auto;text-align: center;">
+			<button>test1</button>
+			<p>this is a text</p>
+		</div>
+		<div style="width:500px;margin:0 auto;text-align: center;">
+			<input type="button" value="test2"></button>
+			<h6>this is a text</h6>
+		</div>
+		<div style="width:500px;margin:0 auto;text-align: center;">
+			<div id="divcc" style="background:#ff0000;height:100px;">use animate finish</div>
+			<div id="divbb" style="background:#ff00ff;height:100px;">this is a box</div>
+		</div>
+		<script>
+			$("button").click(function(){
+				$("p").toggle(1000);
+			})
+			$("input").click(function(){
+				$("h6").fadeToggle(2000);
+			})
+			$("#divcc").click(function(){
+				$("#divbb").animate({height:300 },1000);
+			})
+		</script>
+	</body>
+</html>

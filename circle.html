@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.pie-right{
+				width:200px;
+				height:200px;
+				position:absolute;
+				top:0;
+				left:0;
+				/*background:#0cc;*/
+			}
+			.right{
+				width:200px;
+				height:200px;
+				background:#00aacc;
+				border-radius:50%;
+				position:absolute;
+				top:0;
+				left:0;
+				/*transform: rotate(30deg);
+				-moz-transform:rotate(30deg) ;
+				-ms-transform: rotate(30deg);
+				-webkit-transform: rotate(30deg);
+				-moz-transform: rotate(30deg);*/
+			}
+			.pie-right,.right{
+				/*clip:rect(0,auto,auto,100px);*/
+			}
+			.mask{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				left:25px;
+				top:25px;
+				background:#fff;
+				position:absolute;
+				text-align: center;
+				line-height: 150px;
+				font-size:20px;
+				background:#0cc;
+				clip:rect(75px,auto,auto,0);/*这里不需要剪切,为了看效果*/
+			}
+			.selfwrite{
+				width:300px;
+				height:300px;
+				border-radius: 50%;
+				background: #CA3716;
+				margin:0 auto;
+				border:1px solid #00CCCC;
+				overflow: hidden;
+				position:relative;
+			}
+			.selfmask{
+				background:#fff;
+				width:300px;
+				height:150px;
+				position: absolute;
+			}
+			.selfcon{
+				position: absolute;
+				color:#000;
+				width:300px;
+				height:300px;
+				font-size: 24px;
+				z-index: 5555;
+				text-align: center;
+				line-height: 300px;
+			}
+			.clipuse{
+				margin:400px auto 0;
+				background:#a09b31;
+				width:700px;
+				height:30px;
+				position:relative;
+			}
+			.clipcon{
+				position:absolute;
+				clip:rect(0,500px,10px,50px)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pie-right">
+			<div class="right"></div>
+			<div class="mask"><span>50</span>%</div>
+		</div>
+		<div class="selfwrite">
+			<div class="selfcon">50%</div>
+			<div class="selfmask"></div>
+		</div>
+		<div class="clipuse">
+			<div class="clipcon">我要测试css中的clip这个值得用法</div>
+		</div>
+	</body>
+</html>
